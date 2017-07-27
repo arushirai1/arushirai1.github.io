@@ -3,7 +3,7 @@ Hello, I'm Arushi Rai a first year Computer Science and Electrical Engineering s
 
 ## Project
 
-Qsim related
+Learning and Exploring Cobalt -- the HPC Job Management Suite
 
 ## Weekly Updates
 
