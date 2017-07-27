@@ -12,27 +12,20 @@ Qsim related
 
 
 ### Week Two
+This week I had read three papers: Utilization and Predictability in Scheduling in the IBM SP2 with Backfilling (TPDS 61), Improving Batch Scheduling on Blue Gene/Q by relaxing 5D Torus Network Allocation Constraints (IPDPS 15), and Experience and Practice of Batch Scheduling on Leadership Supercomputers at Argonne. The main focus of this week was exploring scheduling techniques and finally knowing the scheduling policy in use at Argonne. 
 
-This week I had read three papers
+The first paper, TPDS 61 was published over 20 years ago and aims to create a more stable and predictable scheduling system through conservative backfilling. It argues that agressive (EASY) backfilling does not improve predictability because jobs behind the first job can hypothetically have an indefinite wait-time. When a running job terminates earlier than expected, you retain the originl schedule but compress it. **This point is important because a combination or a form of this method could be used with the dragonfly network where the estimated run time is highly unpredicatable.** 
 
-- TPDS 61: Utilization and Predictabilit in Scheduling in the IBM SP2 with Backfilling
-	- to create a more stable and predictable scheduling system through conservative backfilling. It argues that agressive (EASY) backfilling does not improve predictability because jobs behind the first job can hypothetically have an indefinate wait-time. When a previous jobs terminate earlier than expected, you retain the originl schedule but compress it. This point is important because a combination or a form of this method could be used with the dragonfly network where the estimated run time is highly unpredicatable. 
+The second paper, IPDPS 15 describes a couple of allocation mechanisms to externally allocate network resources to applications: MeshSched and CFCA (Contention-free and communication aware.
 
-- IPDPS 15: Improving Batch Scheduling on Blue Gene/Q by relaxing 5D Torus Network Allocation Constraints
-	- The purpose of this paper is to figure out ways to externally allocate network resources to applications. MeshSched and CFCA (Contention-free and communication aware)
 
-The last paper puts all of these concepts and the previous one together to show how they all form Cobalt.
+I have also been exploring the Cobalt code base and alongside reading the code I am refreshing and adding to my knowledge of Python.
 
-This has helped my understand of Cobalt because
+The final paper explores some challenges that are present moving forward in Argonne:
 
-I have also been exploring the Cobalt code base
-	- understand the
+1. For some data collection instruments, having on demand computation capabilities would be helpful. 
+	Explore task-switching/time-sharing techniques to satisfy this immediate demand.
+2. How to prepare the parallel machines at Argonne to deal with queue depth of millions, because of pushes by the government for  HTC workload support.
 
-alongside reading the code I am refreshing and adding to my knowledge of Python
 
-I hope to do explore the following idea in the next week:
 
--
--
-
-this is an area I see room for improvement.
