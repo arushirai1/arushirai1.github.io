@@ -27,5 +27,18 @@ The final paper explores some challenges that are present moving forward in Argo
 	Explore task-switching/time-sharing techniques to satisfy this immediate demand.
 2. How to prepare the parallel machines at Argonne to deal with queue depth of millions, because of pushes by the government for  HTC workload support.
 
+### Week Three
+I read the following papers assigned by Professor Lan.
+
+1) Watch Out for the Bully! Job Interference Study on Dragonfly Network:
+This paper studied the effects of random job placement coupled with adaptive routing on individual jobs. It found that less communication intensive applications were being affected negatively. Essentially, the goal is to minimize the worst case of less comunication intensive applications, but keep the performance of communication intensive applications. The method which was tested was a hybrid-random-contiguous-adaptive allocation. The less communication intensive applications would be placed contiguously and the rest would be allocated randomly, load balancing. While this method showed some improvement, the performance of less communication intesive apps are still significantly affected. **This is why minimizing the worst case of less communication intensive applications still remains an important task.**
+
+2) Job Scheduling HPC Clusters:
+This report established the two classes of clusters: high throughput computing (HTC) clusters and high performance computing (HPC) clusters. For HTC clusters reducing load imbalance to maximize the number of jobs completed are critical goals, whereas minimizing communication overhead is a consideration that must be taken with any HPC cluster. Essentially because there is active communication taking place between nodes in HPC clusters, communication speed is vital because it directly affects the performance of the application and the time in which the job is completed. This report further details the general architecture of HPC clusters and the various terminologies to explain the metrics and approaches for job scheduling.
+
+
+Reading these two papers raised some questions on the dragonfly architecture itself and Application Placement Scheduler (ALPS) which is the internal scheduler used on Cray platforms. This led me to read the original paper on the dragonfly topology. This clarified the overall architecture, but I still need to know **how exactly this is applied on the Theta system.** Lastly, I learned that APLS is used to create a level of abstraction between the an external resource management model, like Cobalt, and the underlying hardware and operating system architecture.
+
+I also read the user guide on Theta and MIRA, mainly focusing on the former.
 
 
