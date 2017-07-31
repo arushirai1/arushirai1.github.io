@@ -40,5 +40,3 @@ This report established the two classes of clusters: high throughput computing (
 Reading these two papers raised some questions on the dragonfly architecture itself and Application Placement Scheduler (ALPS) which is the internal scheduler used on Cray platforms. This led me to read the original paper on the dragonfly topology. This clarified the overall architecture, but I still need to know **how exactly this is applied on the Theta system.** Lastly, I learned that APLS is used to create a level of abstraction between the an external resource management model, like Cobalt, and the underlying hardware and operating system architecture.
 
 I also read the user guide on Theta and MIRA, mainly focusing on the former.
-
-
