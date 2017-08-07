@@ -40,3 +40,14 @@ This report established the two classes of clusters: high throughput computing (
 Reading these two papers raised some questions on the dragonfly architecture itself and Application Placement Scheduler (ALPS) which is the internal scheduler used on Cray platforms. This led me to read the original paper on the dragonfly topology. This clarified the overall architecture, but I still need to know **how exactly this is applied on the Theta system.** Lastly, I learned that APLS is used to create a level of abstraction between the an external resource management model, like Cobalt, and the underlying hardware and operating system architecture.
 
 I also read the user guide on Theta and MIRA, mainly focusing on the former.
+
+### Week Four
+Data center scheduling is done without knowing the duration in advanced, so a hybrid scheduling method that is both suitable for HPC clusters and utilizes the unknown duration-based scheduling components of data center scheduling could help improve scheduling efficiency.
+These are the blog article and papers I was assigned this week:
+(blog post) The evolution of cluster scheduler architectures:
+There are five types of scheduler architectures on **HTC** clusters: monolithic, two-level scheduling (involves partitioning), shared-state architectures, fully distributed architectures, and hybrid architectures which combine fully distributed with monolithic or shared state designs. Essentially using a distributed model for short tasks and low priority batch workloads and using a centralized (monolithic or shared state?) for the rest.
+
+[insert comparison table]
+
+By reading the user guide on Theta, “Early Evaluation of the Cray XC40 Xeon Phi System ‘Theta’ at Argonne, and the “Validation Study of CODES dragonfly network model against Theta ALCF system” I gained a better understanding of the capabilities and limitations of Theta. However, I have not pieced together how I could utilize this in terms of building an appropriate scheduler, this remains a key focus of this following week. Though it has a lot of useful information for when I build an experiment. Because of the level of variability with respect to MPI performance can be significant when there is sudden contention caused by an interfering job, many data points should be run to ensure statistical accuracy. I also thought core specialization was an interesting idea. Also running more than one thread per core, does not improve performance, and degrades performance after two. Lastly, the final paper showed the effect of scale on the benchmark tests and also reached the conclusion that the CODES simulation is largely accurate. However, I noticed that the Bully paper (I read last week) did not have the same configurations as this Theta system, but I guess it doesn’t matter since it just affects latency which I believe is linear.
+
