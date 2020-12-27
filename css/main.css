@@ -38,13 +38,6 @@ ul.posts {
     font-size: 1.5em;
 }
 
-img {
-    border-radius: 50%;
-    vertical-align: middle;
-    width: 10px;
-    height: 10px;
-  }
-
 ul.posts li {
     list-style: none;
 }
