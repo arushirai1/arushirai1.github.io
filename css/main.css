@@ -41,8 +41,8 @@ ul.posts {
 img {
     border-radius: 50%;
     vertical-align: middle;
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
   }
 
 ul.posts li {
