@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubric-Constrained Figure Skating Scoring</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Rubric-Constrained Figure Skating Scoring</h1>
+        <img src="rcs-concept.png" alt="RCS Project Image">
+    </header>
+    <div class="content">
+        <h2>Abstract</h2>
+        <p>Figure skating automatic scoring is the task of estimating the competition score of a performance video. The technical element score (TES) aggregates the technical quality (grade of execution) and difficulty (base value) scores for each element. Most prior work, adapted from short-term action quality assessment, entangle difficulty and quality and compute TES for the entire video, reducing interpretability for athletes. This is mainly due to no element segmentation and difficulty annotations in existing datasets. Motivated by increasing interpretability, we propose a novel method that implicitly segments a video to produce element-level representation and uses adherence with a natural language rubric to score each element, without needing additional annotations. We compute element-level representations using learnable element queries in a transformer and propose implicit segmentation regularization to encourage element queries to attend to elements rather than background transitions between elements (most of video). Additionally, we use the element list (sequence of elements) to isolate difficulty, just like judges who receive the routine list in advance, so we can focus on the more critical problem of how <em>well</em> elements are done. These components significantly improve interpretability, scoring precision, and ranking capability. </p>
+    </div>
+</body>
+</html>
